@@ -1,0 +1,178 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+  --bg: #0f0f0f;
+  --card: #1a1a1a;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --primary: #6c63ff;
+}
+
+/* Body */
+body {
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+nav h2 {
+  color: var(--text);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 120px 80px;
+}
+
+/* HOME SECTION */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Text */
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h3 {
+  color: var(--muted);
+}
+
+.home-text h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.home-text h2 span {
+  color: var(--primary);
+}
+
+.home-text p {
+  color: var(--muted);
+  margin: 15px 0;
+}
+
+/* Button */
+button {
+  background: var(--primary);
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Image */
+.home-image img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.home-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+#about {
+  background: var(--bg);
+}
+
+/* PROJECTS */
+.project {
+  background: var(--card);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+/* CONTACT */
+#contact {
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  .home-text h1 {
+    font-size: 30px;
+  }
+
+  .home-image img {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+}
